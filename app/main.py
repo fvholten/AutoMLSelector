@@ -4,15 +4,18 @@ import sys
 import openml as oml
 import pandas as pd
 import logging
+from pathlib import Path
 
-with open(r"_meta.csv") as csv_file:
+curr_dir = Path(__file__).parent
+
+with open(curr_dir.joinpath(r'_meta.csv')) as csv_file:
   csv_reader = csv.reader(csv_file, delimiter=',')
   list_qualities = list()
   for line in csv_reader:
     list_qualities.append(line[0])
   list_qualities = list_qualities[1:]
 
-with open(r"ml-models.pickle", "rb") as input_file:
+with open(curr_dir.joinpath(r'ml-models.pickle'), "rb") as input_file:
   ml_models = cPickle.load(input_file)
 
 
