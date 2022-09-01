@@ -1,18 +1,7 @@
-id,name,"An Open Source 
-AutoML Benchmark",Best,"Auto-PyTorch Tabular: 
-Multi-Fidelity MetaLearning 
-for Efficient and Robust AutoDL",Best,"A Comparison of AutoML 
-Tools for Machine Learning, 
-Deep Learning and XGBoost",Best,"Auto-Sklearn 2.0: 
-Hands-free AutoML 
-via Meta-Learning",Best,"Benchmark and Survey 
-of Automated Machine 
-Learning Frameworks",,"FLAML: A Fast and 
-Lightweight AutoML 
-Library",Best,Count,Best All
+id,name,"An Open Source AutoML Benchmark",Best,"Auto-PyTorch Tabular: Multi-Fidelity MetaLearning for Efficient and Robust AutoDL",Best,"A Comparison of AutoML Tools for Machine Learning, Deep Learning and XGBoost",Best,"Auto-Sklearn 2.0: Hands-free AutoML via Meta-Learning",Best,"Benchmark and Survey of Automated Machine Learning Frameworks",,"FLAML: A Fast and Lightweight AutoML Library",Best,Count,Best All
 3,kr-vs-kp,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,TPOT,TRUE,FLAML,4,FLAML
 8,liver-disorders,FALSE,,FALSE,,TRUE,auto-sklearn,FALSE,,FALSE,,FALSE,,1,auto-sklearn
-12,mfeat-factors,TRUE,auto-sklearn,TRUE,Auto-PyTorch,FALSE,,TRUE,auto-sklearn,TRUE,ATM,TRUE,FLAML,5,FLAML
+12,mfeat-factors,TRUE,auto-sklearn,TRUE,Auto-PyTorch,FALSE,,TRUE,auto-sklearn,TRUE,ATM,TRUE,FLAML,5,FLAML/ATM
 15,breast-w,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,ATM,FALSE,,1,ATM
 23,cmc,FALSE,,FALSE,,TRUE,auto-sklearn,FALSE,,TRUE,ATM,FALSE,,2,ATM
 24,mushroom,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,TPOT,FALSE,,1,TPOT
@@ -41,7 +30,7 @@ Library",Best,Count,Best All
 798,cholesterol,FALSE,,FALSE,,TRUE,TransmogrifAI,FALSE,,FALSE,,FALSE,,1,TransmogrifAI
 962,mfeat-morphological,FALSE,,FALSE,,TRUE,AutoGluon,FALSE,,FALSE,,FALSE,,1,AutoGluon
 1053,jm1,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,ATM,FALSE,,1,ATM
-1067,kc1,TRUE,TPOT,FALSE,,FALSE,,TRUE,TPOT,TRUE,ATM,TRUE,FLAML,4,ATM
+1067,kc1,TRUE,TPOT,FALSE,,FALSE,,TRUE,TPOT,TRUE,ATM,TRUE,FLAML,4,ATM/FLAML
 1111,KDDCup09_appetency,TRUE,auto-sklearn,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,auto-sklearn,TRUE,FLAML,4,FLAML
 1112,KDDCup09_churn,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,auto-sklearn,FALSE,,1,auto-sklearn
 1114,KDDCup09_upselling,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,auto-sklearn,FALSE,,1,auto-sklearn
@@ -53,8 +42,8 @@ Library",Best,Count,Best All
 1201,BNG(breastTumor),FALSE,,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,FLAML,1,FLAML
 1203,BNG(pwLinear),FALSE,,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,FLAML,1,FLAML
 1461,bank-marketing,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,TPOT,TRUE,FLAML,4,FLAML
-1464,blood-transfusion-service-center,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,ATM,TRUE,FLAML,4,ATM
-1468,cnae-9,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,ATM,TRUE,FLAML,4,ATM
+1464,blood-transfusion-service-center,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,ATM,TRUE,FLAML,4,ATM/FLAML
+1468,cnae-9,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,ATM,TRUE,FLAML,4,ATM/FLAML
 1475,first-order-theorem-proving,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,H2O AutoML,FALSE,,1,H2O AutoML
 1486,nomao,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,H2O AutoML,TRUE,FLAML,4,FLAML
 1489,phoneme,TRUE,TPOT,TRUE,AutoGluon,FALSE,,TRUE,auto-sklearn,TRUE,TPOT,TRUE,FLAML,5,FLAML
@@ -73,7 +62,7 @@ Library",Best,Count,Best All
 23381,dresses-sales,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,TPOT,FALSE,,1,TPOT
 23512,higgs,TRUE,H2O AutoML,TRUE,AutoGluon,FALSE,,TRUE,auto-sklearn,TRUE,auto-sklearn,TRUE,FLAML,5,FLAML
 23517,numerai28.6,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,H2O AutoML,TRUE,TPOT,TRUE,N/A,4,TPOT
-40536,SpeedDating,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,hyperopt.,FALSE,,1,hyperopt.
+40536,SpeedDating,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,Hyperopt-Sklearn,FALSE,,1,Hyperopt-Sklearn
 40668,connect-4,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,H2O AutoML,TRUE,H2O AutoML,TRUE,FLAML,4,FLAML
 40670,dna,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,H2O AutoML,FALSE,,1,H2O AutoML
 40685,shuttle,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,H2O AutoML,TRUE,FLAML,4,FLAML
@@ -83,8 +72,8 @@ Library",Best,Count,Best All
 40966,MiceProtein,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,ATM,FALSE,,1,ATM
 40975,car,TRUE,H2O AutoML,TRUE,AutoGluon,FALSE,,TRUE,auto-sklearn,TRUE,TPOT,TRUE,FLAML,5,FLAML
 40978,Internet-Advertisements,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,auto-sklearn,FALSE,,1,auto-sklearn
-40979,mfeat-pixel,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,hyperopt.,FALSE,,1,hyperopt.
-40981,Australian,TRUE,Auto-WEKA,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,ATM,TRUE,FLAML,4,ATM
+40979,mfeat-pixel,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,Hyperopt-Sklearn,FALSE,,1,Hyperopt-Sklearn
+40981,Australian,TRUE,Auto-WEKA,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,ATM,TRUE,FLAML,4,ATM/FLAML
 40982,steel-plates-fault,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,TPOT,FALSE,,1,TPOT
 40983,wilt,FALSE,,FALSE,,FALSE,,FALSE,,TRUE,ATM,FALSE,,1,ATM
 40984,segment,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,H2O AutoML,TRUE,FLAML,4,FLAML
@@ -95,14 +84,14 @@ Library",Best,Count,Best All
 41142,christine,TRUE,auto-sklearn,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,auto-sklearn,TRUE,FLAML,4,FLAML
 41143,jasmine,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,TPOT,TRUE,TPOT,TRUE,FLAML,4,FLAML
 41146,sylvine,TRUE,TPOT,FALSE,,FALSE,,TRUE,TPOT,TRUE,TPOT,TRUE,FLAML,4,FLAML
-41147,albert,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,ATM,TRUE,FLAML,4,ATM
+41147,albert,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,ATM,TRUE,FLAML,4,ATM/FLAML
 41150,MiniBooNE,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,H2O AutoML,TRUE,FLAML,4,FLAML
 41159,guillermo,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,H2O AutoML,TRUE,FLAML,4,FLAML
 41161,riccardo,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,TPOT,TRUE,FLAML,4,FLAML
 41163,dilbert,TRUE,H2O AutoML,TRUE,AutoGluon,FALSE,,TRUE,auto-sklearn,TRUE,auto-sklearn,TRUE,FLAML,5,FLAML
 41164,fabert,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,H2O AutoML,TRUE,H2O AutoML,TRUE,FLAML,4,FLAML
 41165,robert,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,auto-sklearn,TRUE,FLAML,4,FLAML
-41166,volkert,TRUE,H2O AutoML,TRUE,AutoGluon,FALSE,,TRUE,auto-sklearn,TRUE,ATM,TRUE,FLAML,5,ATM
-41167,dionis,TRUE,Auto-WEKA,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,hyperopt.,TRUE,FLAML,4,FLAML
+41166,volkert,TRUE,H2O AutoML,TRUE,AutoGluon,FALSE,,TRUE,auto-sklearn,TRUE,ATM,TRUE,FLAML,5,ATM/FLAML
+41167,dionis,TRUE,Auto-WEKA,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,Hyperopt-Sklearn,TRUE,FLAML,4,FLAML
 41168,jannis,TRUE,auto-sklearn,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,auto-sklearn,TRUE,FLAML,4,FLAML
 41169,helena,TRUE,H2O AutoML,FALSE,,FALSE,,TRUE,auto-sklearn,TRUE,TPOT,TRUE,FLAML,4,FLAML
