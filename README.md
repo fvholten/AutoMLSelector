@@ -20,7 +20,6 @@ Possible AutoML tools are:
 - [FLAML](https://microsoft.github.io/FLAML/)
 - [H2O AutoML](https://docs.h2o.ai/h2o/latest-stable/h2o-docs/automl.html)
 - [Hyperopt](http://hyperopt.github.io/hyperopt/)
-- [rminer AutoML](https://cran.r-project.org/web/packages/rminer/rminer.pdf)
 - [TPOT](http://automl.info/tpot/)
 - [TransmogrifAI](https://transmogrif.ai)
 
