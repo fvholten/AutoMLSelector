@@ -1,4 +1,4 @@
-import _pickle as cPickle
+import pickle
 import csv
 import sys
 import openml as oml
@@ -15,9 +15,8 @@ with open(curr_dir.joinpath(r'_meta.csv')) as csv_file:
     list_qualities.append(line[0])
   list_qualities = list_qualities[1:]
 
-with open(curr_dir.joinpath(r'ml-models.pickle'), "rb") as input_file:
-  ml_models = cPickle.load(input_file)
-
+with open(curr_dir.joinpath(r'automl.pkl'), "rb") as input_file:
+  automl = pickle.load(input_file)
 
 dataset_id = sys.argv[1]
 dataset = oml.datasets.get_dataset(dataset_id)
@@ -30,21 +29,8 @@ for quality in list_qualities:
   t[quality] = [dataset.qualities.get(quality)]
 test_df = pd.DataFrame(t)
 
-bestProbability = dict()
-currentBest = 0
-for key, value in ml_models.items():
-  aml = value.get('model')
-  probability = aml.predict_proba(test_df)[0]
-  logging.info("{key}: {probability}".format(key=key, probability=probability))
+classes_to_proba = dict(zip(automl.classes_, automl.predict_proba(test_df)[0]))
 
-  probability1 = float(probability[1])
+proba_of_best = classes_to_proba.get(automl.predict(test_df)[0])
 
-  if probability1 == currentBest:
-    bestProbability[key] = probability1
-
-  if probability1 > currentBest:
-    currentBest = probability1
-    bestProbability.clear()
-    bestProbability[key] = probability1
-    
-print("The best-choice for:\n\"{dataset}\"\n\nis the AutoML-Tool: \"{automl_tool}\".".format(dataset=dataset, automl_tool=', '.join(bestProbability)))
+print("For dataset:\n\"{dataset}\"\n\nThe best-choice is: \"{automl_tool}\"\n-> with a probability of: {proba}".format(dataset=dataset, automl_tool=', '.join(automl.predict(test_df)), proba=proba_of_best))
