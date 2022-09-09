@@ -1,15 +1,21 @@
 from flaml import AutoML
 import pandas as pd
 import pickle
+from datetime import datetime
 
-df = pd.read_csv('scripts/training-data/data.csv')
+df = pd.read_csv('data.csv')
 X_train, y_train = df.iloc[:, :-1], df.iloc[:, -1]
 
-with open(r"app/automl.pkl", "rb") as input_file:
-  automl1 = pickle.load(input_file)
+automl = AutoML()
 
-automl2 = AutoML()
-automl2.fit(X_train, y_train, task="multiclass", time_budget=60*60, starting_points=automl1.best_config_per_estimator)
+automl_settings = {
+    "task": "multiclass",
+    "time_budget": 2*60*60,
+    "metric": 'accuracy',
+    "log_file_name": 'automl{}.log'.format(datetime.now())    
+}
 
-with open("automl.pkl", "wb") as f:
-    pickle.dump(automl2, f, pickle.HIGHEST_PROTOCOL)
+automl.fit(X_train, y_train, **automl_settings)
+
+with open('automl.pkl', 'wb') as f:
+    pickle.dump(automl, f, pickle.HIGHEST_PROTOCOL)
