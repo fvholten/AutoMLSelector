@@ -46,5 +46,5 @@ for key, value in ml_models.items():
     currentBest = probability1
     bestProbability.clear()
     bestProbability[key] = probability1
-    
-print("The best-choice for:\n\"{dataset}\"\n\nis the AutoML-Tool: \"{automl_tool}\".".format(dataset=dataset, automl_tool=', '.join(bestProbability)))
+
+print("For dataset:\n\"{dataset}\"\n\nThe best-choice is: \"{automl_tool}\"\n-> with a probability of: {proba}".format(dataset=dataset, automl_tool=', '.join(bestProbability), proba=proba_of_best))
