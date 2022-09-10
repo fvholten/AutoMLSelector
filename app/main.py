@@ -1,4 +1,4 @@
-import _pickle as cPickle
+import pickle
 import csv
 import sys
 import openml as oml
@@ -16,7 +16,7 @@ with open(curr_dir.joinpath(r'_meta.csv')) as csv_file:
   list_qualities = list_qualities[1:]
 
 with open(curr_dir.joinpath(r'ml-models.pickle'), "rb") as input_file:
-  ml_models = cPickle.load(input_file)
+  ml_models = pickle.load(input_file)
 
 
 dataset_id = sys.argv[1]
