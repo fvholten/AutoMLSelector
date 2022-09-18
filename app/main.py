@@ -6,7 +6,8 @@ import pandas as pd
 import logging
 from pathlib import Path
 
-def predict(automl, test_df, classes_to_proba):
+def predict(automl, test_df):
+    classes_to_proba = dict(zip(automl.classes_, automl.predict_proba(test_df)[0]))
     return classes_to_proba.get(automl.predict(test_df)[0]),automl.predict(test_df)[0]
     
 curr_dir = Path(__file__).parent
@@ -32,9 +33,7 @@ for quality in list_qualities:
   t[quality] = [dataset.qualities.get(quality)]
 test_df = pd.DataFrame(t)
 
-classes_to_proba = dict(zip(automl.classes_, automl.predict_proba(test_df)[0]))
-
-proba_of_best, automl_tool = predict(automl, test_df, classes_to_proba)
+proba_of_best, automl_tool = predict(automl, test_df)
 
 print("For dataset:")
 print(dataset)
