@@ -6,6 +6,9 @@ import pandas as pd
 import logging
 from pathlib import Path
 
+def predict(automl, test_df, classes_to_proba):
+    return classes_to_proba.get(automl.predict(test_df)[0]),automl.predict(test_df)[0]
+    
 curr_dir = Path(__file__).parent
 
 with open(curr_dir.joinpath(r'_meta.csv')) as csv_file:
@@ -31,6 +34,11 @@ test_df = pd.DataFrame(t)
 
 classes_to_proba = dict(zip(automl.classes_, automl.predict_proba(test_df)[0]))
 
-proba_of_best = classes_to_proba.get(automl.predict(test_df)[0])
+proba_of_best, automl_tool = predict(automl, test_df, classes_to_proba)
 
-print("For dataset:\n\"{dataset}\"\n\nThe best-choice is: \"{automl_tool}\"\n-> with a probability of: {proba}".format(dataset=dataset, automl_tool=', '.join(automl.predict(test_df)), proba=proba_of_best))
+print("For dataset:")
+print(dataset)
+print()
+print()
+print("The best-choice is: \"{automl_tool}\"".format(automl_tool=automl_tool))
+print("-> with a probability of: {proba}".format(proba=proba_of_best))
